@@ -27,7 +27,7 @@ class ViewController: UITabBarController {
         
         let profileTabBar = ProfileViewController()
         let profileViewItems = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
-        profileTabBar.tabBarItem = profileTabBar
+        profileTabBar.tabBarItem = profileViewItems
         
         self.viewControllers = [catalogTabBar, cartTabBar, profileTabBar]
     }
