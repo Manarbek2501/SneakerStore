@@ -7,11 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .darkGray
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let catalogTabBar = CatalogViewController()
+        let catalogViewItems = UITabBarItem(title: "Catalog", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
+        catalogTabBar.tabBarItem = catalogViewItems
+        
+        self.viewControllers = [catalogTabBar]
+    }
+    
 }
 
