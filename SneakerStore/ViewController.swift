@@ -11,26 +11,31 @@ class ViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .darkGray
+        setupTabBar()
+    }
+    func setupTabBar() {
+        let catalogTabBar = self.createNav(title: "Catalog", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"), viewController: CatalogViewController(), navigationTitle: "Hello, Sneakerhead!")
+        
+        let cartTabBar = self.createNav(title: "Cart", image: UIImage(systemName: "cart"), selectedImage: UIImage(systemName: "cart.fill"), viewController: CartViewController(), navigationTitle: "Cart")
+        
+        let profileTabBar = self.createNav(title: "Profile", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"), viewController: ProfileViewController(), navigationTitle: "Profile")
+        self.setViewControllers([catalogTabBar, cartTabBar, profileTabBar], animated: true)
+        
+        self.tabBar.isTranslucent = false
+        UITabBar.appearance().tintColor = .black
+        UITabBar.appearance().unselectedItemTintColor = .gray
+        self.tabBar.backgroundColor = .white
+        self.tabBar.layer.borderWidth = 0.50
+        self.tabBar.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.3)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let catalogTabBar = CatalogViewController()
-        let catalogViewItems = UITabBarItem(title: "Catalog", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
-        catalogTabBar.tabBarItem = catalogViewItems
-        
-        let cartTabBar = CartViewController()
-        let cartViewItems = UITabBarItem(title: "Cart", image: UIImage(systemName: "cart"), selectedImage: UIImage(systemName: "cart.fill"))
-        cartTabBar.tabBarItem = cartViewItems
-        
-        
-        let profileTabBar = ProfileViewController()
-        let profileViewItems = UITabBarItem(title: "Profile", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
-        profileTabBar.tabBarItem = profileViewItems
-        
-        self.viewControllers = [catalogTabBar, cartTabBar, profileTabBar]
+    private func createNav(title: String, image: UIImage?, selectedImage: UIImage?, viewController: UIViewController, navigationTitle: String) -> UINavigationController {
+        let nav = UINavigationController(rootViewController: viewController)
+        nav.tabBarItem.title = title
+        nav.tabBarItem.image = image
+        nav.tabBarItem.selectedImage = selectedImage
+        nav.viewControllers.first?.navigationItem.title = navigationTitle
+        return nav
     }
-    
 }
 
