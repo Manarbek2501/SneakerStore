@@ -20,7 +20,11 @@ class ViewController: UITabBarController {
         let catalogViewItems = UITabBarItem(title: "Catalog", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         catalogTabBar.tabBarItem = catalogViewItems
         
-        self.viewControllers = [catalogTabBar]
+        let cartTabBar = CartViewController()
+        let cartViewItems = UITabBarItem(title: "Cart", image: UIImage(systemName: "cart"), selectedImage: UIImage(systemName: "cart.fill"))
+        cartTabBar.tabBarItem = cartViewItems
+        
+        self.viewControllers = [catalogTabBar, cartTabBar]
     }
     
 }
