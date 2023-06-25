@@ -11,6 +11,7 @@
 		4BD14D9A2A445F6800A56B87 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14D992A445F6800A56B87 /* CatalogViewController.swift */; };
 		4BD14D9C2A445F7200A56B87 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14D9B2A445F7200A56B87 /* CartViewController.swift */; };
 		4BD14D9E2A445F9000A56B87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14D9D2A445F9000A56B87 /* ProfileViewController.swift */; };
+		4BD14DA82A48BFFB00A56B87 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD14DA72A48BFFB00A56B87 /* Builder.swift */; };
 		4BE730B12A38E38A0087FF0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE730B02A38E38A0087FF0A /* AppDelegate.swift */; };
 		4BE730B32A38E38A0087FF0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE730B22A38E38A0087FF0A /* SceneDelegate.swift */; };
 		4BE730B52A38E38A0087FF0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE730B42A38E38A0087FF0A /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		4BD14D992A445F6800A56B87 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		4BD14D9B2A445F7200A56B87 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		4BD14D9D2A445F9000A56B87 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4BD14DA72A48BFFB00A56B87 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		4BE730AD2A38E38A0087FF0A /* SneakerStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakerStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE730B02A38E38A0087FF0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BE730B22A38E38A0087FF0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,33 @@
 			path = MainScreensTabBar;
 			sourceTree = "<group>";
 		};
+		4BD14DA42A48BFA300A56B87 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				4BE730B02A38E38A0087FF0A /* AppDelegate.swift */,
+				4BE730B22A38E38A0087FF0A /* SceneDelegate.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		4BD14DA52A48BFB200A56B87 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4BD14DA72A48BFFB00A56B87 /* Builder.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4BD14DA62A48BFC000A56B87 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				4BE730B62A38E38A0087FF0A /* Main.storyboard */,
+				4BE730B92A38E38A0087FF0A /* Assets.xcassets */,
+				4BE730BB2A38E38A0087FF0A /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		4BE730A42A38E38A0087FF0A = {
 			isa = PBXGroup;
 			children = (
@@ -96,13 +125,11 @@
 		4BE730AF2A38E38A0087FF0A /* SneakerStore */ = {
 			isa = PBXGroup;
 			children = (
+				4BD14DA62A48BFC000A56B87 /* Support */,
+				4BD14DA52A48BFB200A56B87 /* Helper */,
+				4BD14DA42A48BFA300A56B87 /* Entry */,
 				4BD14D982A445F4000A56B87 /* MainScreensTabBar */,
-				4BE730B02A38E38A0087FF0A /* AppDelegate.swift */,
-				4BE730B22A38E38A0087FF0A /* SceneDelegate.swift */,
 				4BE730B42A38E38A0087FF0A /* ViewController.swift */,
-				4BE730B62A38E38A0087FF0A /* Main.storyboard */,
-				4BE730B92A38E38A0087FF0A /* Assets.xcassets */,
-				4BE730BB2A38E38A0087FF0A /* LaunchScreen.storyboard */,
 				4BE730BE2A38E38A0087FF0A /* Info.plist */,
 			);
 			path = SneakerStore;
@@ -225,6 +252,7 @@
 			files = (
 				4BD14D9E2A445F9000A56B87 /* ProfileViewController.swift in Sources */,
 				4BD14D9A2A445F6800A56B87 /* CatalogViewController.swift in Sources */,
+				4BD14DA82A48BFFB00A56B87 /* Builder.swift in Sources */,
 				4BE730B52A38E38A0087FF0A /* ViewController.swift in Sources */,
 				4BD14D9C2A445F7200A56B87 /* CartViewController.swift in Sources */,
 				4BE730B12A38E38A0087FF0A /* AppDelegate.swift in Sources */,
